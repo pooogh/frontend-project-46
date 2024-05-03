@@ -10,14 +10,14 @@ To install the project, run the following command:
 make install
 ```
 
-Quick Start
+### Quick Start
 To quickly get started, use the following command to see the available options:
 ```bash
 gendiff -h
 ```
 
 ### Usage
-## Flat JSON Files
+#### Flat JSON Files
 To compare flat JSON files, use the following command:
 ```bash
 gendiff path/to/file1.json path/to/file2.json
@@ -25,7 +25,7 @@ gendiff path/to/file1.json path/to/file2.json
 Example:
 [![asciicast](https://asciinema.org/a/657551.svg)](https://asciinema.org/a/657551)
 
-## Flat YAML Files
+#### Flat YAML Files
 For working with YAML files, you can use the file extensions `.yml` and `.yaml`.
 To compare flat YAML files, use the following command:
 ```bash
