@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import _ from 'lodash';
 
-const makeAbsolutePath = (filepath) => path.resolve(process.cwd(), `./${filepath}`);
+const makeAbsolutePath = (filepath) => path.resolve(process.cwd(), filepath);
 const getFileData = (filepath) => fs.readFileSync(filepath, 'utf-8');
 const jsonPrepare = (data) => JSON.parse(data);
 const findDiff = (data1, data2) => {
@@ -29,6 +29,7 @@ const findDiff = (data1, data2) => {
       `+ ${key}: ${obj2[key]}`,
     ];
   });
+  console.log(diff);
   return `{\n${diff.join('\n')}\n}`;
 };
 
@@ -37,7 +38,7 @@ const genDiff = (filepath1, filepath2) => {
   const file2 = makeAbsolutePath(filepath2);
   const fileData1 = getFileData(file1);
   const fileData2 = getFileData(file2);
-  console.log(findDiff(fileData1, fileData2));
+  return findDiff(fileData1, fileData2);
 };
 
 export default genDiff;
