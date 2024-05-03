@@ -12,7 +12,7 @@ jobs:
               uses: actions/setup-node@v3
 
             - name: Install dependencies
-              uses: make install
+              run: make install
 
             - name: Run lint
               run: make lint
